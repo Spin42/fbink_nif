@@ -27,7 +27,7 @@ Add `fbink_nif` to your `mix.exs` dependencies:
 ```elixir
 def deps do
   [
-    {:fbink_nif, github: "mlainez/fbink_nif"}
+    {:fbink_nif, github: "Spin42/fbink_nif"}
   ]
 end
 ```
@@ -163,4 +163,4 @@ The C NIF layer handles all marshalling between Elixir maps/structs and FBInk's 
 
 ## License
 
-MIT License - Copyright (c) 2026 Marc Lainez. See [LICENSE](LICENSE) for details.
+MIT License - Copyright (c) 2026 Spin42. See [LICENSE](LICENSE) for details.
