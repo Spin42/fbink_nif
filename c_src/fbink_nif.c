@@ -108,7 +108,6 @@ static ERL_NIF_TERM atom_glyph_height;
 static ERL_NIF_TERM atom_is_perfect_fit;
 static ERL_NIF_TERM atom_is_mtk;
 static ERL_NIF_TERM atom_is_sunxi;
-static ERL_NIF_TERM atom_is_tolino;
 static ERL_NIF_TERM atom_sunxi_has_fbdamage;
 static ERL_NIF_TERM atom_sunxi_force_rota;
 static ERL_NIF_TERM atom_is_kindle_legacy;
@@ -404,8 +403,6 @@ static ERL_NIF_TERM fbink_state_to_map(ErlNifEnv *env, const FBInkState *state) 
         state->is_mtk ? atom_true : atom_false, &map);
     enif_make_map_put(env, map, atom_is_sunxi,
         state->is_sunxi ? atom_true : atom_false, &map);
-    enif_make_map_put(env, map, atom_is_tolino,
-        state->is_tolino ? atom_true : atom_false, &map);
     enif_make_map_put(env, map, atom_sunxi_has_fbdamage,
         state->sunxi_has_fbdamage ? atom_true : atom_false, &map);
     enif_make_map_put(env, map, atom_sunxi_force_rota,
@@ -1939,7 +1936,6 @@ static int load(ErlNifEnv *env, void **priv_data, ERL_NIF_TERM load_info) {
     atom_is_perfect_fit         = make_atom(env, "is_perfect_fit");
     atom_is_mtk                 = make_atom(env, "is_mtk");
     atom_is_sunxi               = make_atom(env, "is_sunxi");
-    atom_is_tolino              = make_atom(env, "is_tolino");
     atom_sunxi_has_fbdamage     = make_atom(env, "sunxi_has_fbdamage");
     atom_sunxi_force_rota       = make_atom(env, "sunxi_force_rota");
     atom_is_kindle_legacy       = make_atom(env, "is_kindle_legacy");
